@@ -1,31 +1,28 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
-*print_square - prints squares
-*@size: parameter
-*Return: returns nothing
+* print_diagonal - draws a diagonal line
+* @n: takes in an integer
 */
 
-void print_square(int size)
+void print_diagonal(int n)
 {
-	int inc1, inc2;
+	int i, j;
 
-	if (size > 0)
+	if (n <= 0)
+		_putchar('\n');
+
+	for (i = 0; i < n; i++)
 	{
-		for (inc1 = 0; inc1 < size; inc1++)
+		for (j = 0; j <= i; j++)
 		{
-			for (inc2 = 0; inc2 < (size - 1); inc2++)
+			if (i == j)
 			{
-				putchar('#');
+				_putchar('\\');
+				_putchar('\n');
 			}
-
-			putchar('#');
-			putchar('\n');
+			else
+				_putchar(' ');
 		}
-	}
-	else
-	{
-		putchar('\n');
 	}
 }

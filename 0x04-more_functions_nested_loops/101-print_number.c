@@ -1,6 +1,5 @@
-
 Sign up
-Georgeoloche
+prevho
 /
 alx-low_level_programming
 Public
@@ -12,29 +11,29 @@ Projects
 Security
 Insights
 alx-low_level_programming/0x04-more_functions_nested_loops/101-print_number.c
-@Georgeoloche
-Georgeoloche Update 101-print_number.c
+@prevho
+prevho Challenges for breakfast
  1 contributor
-22 lines (19 sloc)  268 Bytes
-#include <stdio.h>
+Executable File  22 lines (17 sloc)  275 Bytes
 #include "main.h"
 
 /**
-* print_number - Prints a number
-* @n: The number to print
-*/
+ * print_number - Prints an integer.
+ * @n: integer to be printed.
+ */
 
 void print_number(int n)
 {
-	unsigned int x;
+	unsigned int num = n;
 
-	x = n;
 	if (n < 0)
 	{
-		_putchar(45);
-		x = -n;
+		_putchar('-');
+		num = -num;
 	}
-	if (x / 10)
-		print_number(x / 10);
-	_putchar((x % 10) + '0');
+
+	if ((num / 10) > 0)
+		print_number(num / 10);
+
+	_putchar((num % 10) + '0');
 }
